@@ -1,0 +1,16 @@
+{
+  "total_price_promotions": {
+    "60": {
+      "discount_percentage": 0.1
+    },
+    "100": {
+      "discount_percentage": 0.3
+    }
+  },
+  "product_promotions": {
+    "001": {
+      "quantity_required": 2,
+      "discount_price": 8.50
+    }
+  }
+}

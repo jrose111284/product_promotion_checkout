@@ -1,18 +1,15 @@
-[
-  {
-    "product_code" : "001",
-    "product_name" : "Lavender heart",
-    "product_price" : 9.25,
-    "promotion_price" : 8.50
+{
+  "001": {
+    "product_name": "Lavender heart",
+    "product_price": 9.25,
+    "promotion_price": 8.50
   },
-  {
-    "product_code" : "002",
-    "product_name" : "Personalised cufflinks",
-    "product_price" : 45.00
+  "002": {
+    "product_name": "Personalised cufflinks",
+    "product_price": 45.00
   },
-  {
-    "product_code" : "003",
-    "product_name" : "Kids T-shirt",
-    "product_price" : 19.95
+  "003": {
+    "product_name": "Kids T-shirt",
+    "product_price": 19.95
   }
-]
+}

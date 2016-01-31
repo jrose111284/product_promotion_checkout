@@ -25,8 +25,6 @@ class Checkout
     apply_total_price_promotion(total_price).round(2)
   end
 
-  private
-
   def apply_total_price_promotion(total_price)
     correct_promotion = find_correct_total_price_promotion(total_price)
     if correct_promotion

@@ -22,24 +22,44 @@ describe Checkout do
     expect(checkout.total).to eq (54.25)
   end
 
-  it "applys over £60 promotion" do
+  it "over £60 promotion discount 10 percent off" do
     checkout.scan('001')
     checkout.scan('002')
     checkout.scan('003')
     expect(checkout.total).to eq (66.78)
   end
 
-  it "applys over £60 promotion" do
-    checkout.scan('002')
-    checkout.scan('002')
+  it "two or more lavender hearts at £8.50 promotion" do
+    checkout.scan('001')
     checkout.scan('003')
-    expect(checkout.total).to eq (76.97)
+    checkout.scan('001')
+    expect(checkout.total).to eq (36.95)
   end
 
-  it "applys discount when ordering over two 001 products" do
+  it "two or more lavender hearts at £8.50 promotion instead of £60 promotions" do
+    checkout.scan('001')
+    checkout.scan('002')
+    checkout.scan('001')
+    checkout.scan('003')
+    expect(checkout.total).to eq (73.76)
+  end
+
+  it "discount when ordering over two 001 products" do
     checkout.scan('001')
     checkout.scan('001')
     expect(checkout.total).to eq (17.00)
+  end
+
+  it "checks if item is in the £60 promotion range" do
+    checkout.scan('002')
+    checkout.scan('002')
+    expect(checkout.find_correct_total_price_promotion(61.00)).to eq(60)
+  end
+
+  it "checks if two 001 codes is in promotion" do
+    checkout.scan('001')
+    checkout.scan('001')
+    expect(checkout.product_fulfulls_promotion("001")).to eq(true)
   end
 
 end

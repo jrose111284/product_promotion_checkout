@@ -16,8 +16,8 @@ co.total
 
 ### My Approach
 After reading the task the thing that stood out the most was "because our promotions will change, it needs to be flexible regarding our promotional rules." It seemed to me it needed some sort or data source like a JSON file.
-So i used 2 json files one with products and one for promotions.
-It needed to be flexible so any discount could change and it should work on this program. here is example of my json file
+So i used 2 JSON files one for products, and one for promotions.
+As it needed to be flexible so any discount could change, it needed to work with this program. Here is example of my JSON file
 ```
 "total_price_promotions": {
   "60": {
@@ -36,4 +36,4 @@ It needed to be flexible so any discount could change and it should work on this
 }
 ```
 
-Here i have a product promotion, and a total discount promotion. As long as you keep it in this format you will be able to change it to any promotion you wish. I added a £100 or over with 30 percent off just because it needed to be flexible, and could find the best deal for the customer. This added feature was only to show the flexibilty and nothing else. I felt the only way this would work is to make sure nothing is hard coded and did my best to stick to them rules
+Here i have a product promotion, and a total discount promotion. As long as you keep it in this format, you will be able to change any promotion you wish in the future. I added a over £100 promotion with 30 percent off, just because it needed to be flexible, and could find the best deal for the customer. This added feature was only to show the flexibility it required. I felt the only way this would work is to make sure nothing is hard coded, and did my best to stick to them rules
